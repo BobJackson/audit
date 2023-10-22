@@ -53,8 +53,6 @@ public class Book {
                 String publisher,
                 String createdBy,
                 Instant createdAt,
-                String updatedBy,
-                Instant updatedAt,
                 Integer version) {
         this.id = id;
         this.isbn = isbn;
@@ -64,13 +62,11 @@ public class Book {
         this.publisher = publisher;
         this.createdBy = createdBy;
         this.createdAt = createdAt;
-        this.updatedBy = updatedBy;
-        this.updatedAt = updatedAt;
         this.version = version;
     }
 
     public static Book of(String isbn, String title, String author, Double price, String publisher) {
-        return new Book(null, isbn, title, author, price, publisher, null, null, null, null, 0);
+        return new Book(null, isbn, title, author, price, publisher, null, null, 0);
     }
 
     // getter
